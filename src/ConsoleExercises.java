@@ -24,41 +24,41 @@ public class ConsoleExercises {
 
         //Prompt 2
 
-        Scanner scanner2 = new Scanner(System.in);
+        scanner.nextLine();
 
         System.out.print("Enter three words: ");
 
-        String firstWord = scanner2.next();
+        String firstWord = scanner.next();
 
-        String secondWord = scanner2.next();
+        String secondWord = scanner.next();
 
-        String thirdWord = scanner2.next();
+        String thirdWord = scanner.next();
 
         System.out.printf("You entered %s %s %s \n", firstWord, secondWord, thirdWord);
 
 
         //Prompt 3
 
-        Scanner scanner3 = new Scanner(System.in);
+        scanner.nextLine();
 
         System.out.print("Enter a sentence: ");
 
-        String fullSentence = scanner3.nextLine();
+        String fullSentence = scanner.nextLine();
 
         System.out.printf("You entered: %s \n", fullSentence);
 
 
         //Calculate perimeter
 
-        Scanner scanner4 = new Scanner(System.in);
+        scanner.nextLine();
 
         System.out.print("Enter a width and length: ");
 
-        String width = scanner4.nextLine();
+        String width = scanner.nextLine();
 
         int number1 = Integer.parseInt(width);
 
-        String height = scanner4.nextLine();
+        String height = scanner.nextLine();
 
         int number2 = Integer.parseInt(height);
 
