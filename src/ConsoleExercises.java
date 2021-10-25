@@ -64,7 +64,7 @@ public class ConsoleExercises {
 
         int total = number1 * number2;
 
-        System.out.printf("The perimeter: %s \n", total);
+        System.out.printf("The perimeter: %d \n", total);
 
     }
 
