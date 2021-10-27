@@ -34,6 +34,8 @@ public class MethodsExercises {
 //        getInteger(1, 10); //Integer
 
         getFactorial(getInteger(1, 10)); //Factorial
+
+        diceRoll(); //Void since nothing is being passed in. Dice Roll.
     }
 
 //Min-Max Range
@@ -69,7 +71,36 @@ public class MethodsExercises {
     }
 
 
+    //Dice Roll
+
+    public static void diceRoll() {
+
+        String choice = "r"; // Determines dice roll
+        String choice2 = "y"; //Determines choice to roll
+        while (choice2.equals("y")) {
+
+        Scanner diceScanner = new Scanner(System.in);
+
+        System.out.println("Let's roll a dice! How many sides do you want?");
+        int diceSides = diceScanner.nextInt();
+
+        System.out.println("Let's roll the dice! (type in r for roll)");
+        choice = diceScanner.next();
+
+        if(choice.equals("r")) {
+            int dice = (int)(Math.random()*diceSides+1);
+            int dice2 = (int)(Math.random()*diceSides+1);
+            System.out.println("Your first dice roll is: " + dice);
+            System.out.println("Your second dice roll is: " + dice2);
+        }
+
+            System.out.print("\nWant to roll again? (y/n):\t\t");
+            choice2 = diceScanner.next();
+            System.out.println();
 
 
+        }
+
+    }
 
 }
