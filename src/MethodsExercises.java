@@ -98,7 +98,6 @@ public class MethodsExercises {
             choice2 = diceScanner.next();
             System.out.println();
 
-
         }
 
     }
