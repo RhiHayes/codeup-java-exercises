@@ -40,6 +40,10 @@ public String getString() {
 
     }
 
+    public int getInt(){
+        return scanner.nextInt();
+    }
+
 
     public double getDouble(double min, double max) {
         System.out.println("Enter an integer between " + min + " and " + max);
@@ -53,6 +57,11 @@ public String getString() {
         return userInput;
     }
 
+
+
+    public double getDouble(){
+        return scanner.nextDouble();
+    } //Hadn't programmed this in; this is what I needed for my circle app.
 
 
 
