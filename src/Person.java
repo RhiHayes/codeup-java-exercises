@@ -1,3 +1,5 @@
+package util;
+
 public class Person {
 
     private String name;
@@ -47,7 +49,6 @@ public class Person {
 //        person2.setName("Jane");
 //        System.out.println(person1.getName()); //Jane
 //        System.out.println(person2.getName()); //Jane
-
 
     }
 
