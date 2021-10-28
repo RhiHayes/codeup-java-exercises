@@ -28,6 +28,27 @@ public class Person {
         rhiannon.sayHello();
         rhiannon.setName("Kimi");
         rhiannon.sayHello();
+
+        //COPIED AND PASTED CODE
+
+//        Person person1 = new Person("John");
+//        Person person2 = new Person("John");
+//        System.out.println(person1.getName().equals(person2.getName())); //returns true
+//        System.out.println(person1 == person2); //returns false
+
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        System.out.println(person1 == person2); //returns true
+
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        System.out.println(person1.getName()); //John
+//        System.out.println(person2.getName()); //John
+//        person2.setName("Jane");
+//        System.out.println(person1.getName()); //Jane
+//        System.out.println(person2.getName()); //Jane
+
+
     }
 
 
