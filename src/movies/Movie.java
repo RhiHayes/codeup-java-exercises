@@ -12,9 +12,20 @@ public class Movie {
         this.category = category;
     }
 
-    public static void main(String[] args) {
+    public String getName() {
+        return name;
+    }
 
+    public String getCategory() {
+        return category;
+    }
 
+    public void setName(String movieName) {
+        this.name = movieName;
+    }
+
+    public void setCategory(String movieCategory) {
+        this.category = movieCategory;
     }
 
 
