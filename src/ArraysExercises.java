@@ -40,7 +40,7 @@ public class ArraysExercises {
         System.out.println(Arrays.toString(people)); //Prints out 3 base people
 
         for(int i = 0; i < people.length; i++){
-            System.out.println("for loop " + people[i].getName());
+            System.out.println("For loop " + people[i].getName());
         } //The for loop prints out each individual name
 
         Person myPerson = new Person("Bakugo");
