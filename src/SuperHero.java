@@ -2,7 +2,7 @@ import util.Person;
 
 public class SuperHero extends Person {
 
-    private String alterEgo; //For our normal name
+    private String alterEgo; //For our superhero name
 
     public SuperHero(String governmentName, String alterEgo) {
 
