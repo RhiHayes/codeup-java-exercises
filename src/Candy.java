@@ -1,7 +1,10 @@
+import java.util.Arrays;
+
 public class Candy {
 
     public String candyName;
     public String candySize;
+    public String[] candyDescriptors;
 
 
     public Candy (String name) {
@@ -15,6 +18,14 @@ public class Candy {
 
         this.candyName = name;
         this.candySize = size;
+
+    }
+
+    public Candy (String name, String size, String[] descriptors) {
+
+        this.candyName = name;
+        this.candySize = size;
+        this.candyDescriptors = descriptors;
 
     }
 
@@ -37,10 +48,12 @@ public class Candy {
 
         Candy reeses = new Candy("Reeses");
         Candy hershey = new Candy("Hershey's", "Big Bar");
+        Candy mnm = new Candy("M&M's", "Fun sized", new String[] {"candy coated", "chocolate"});
 
         System.out.println(reeses.candyName + " " + reeses.candySize);
         System.out.println(hershey.candyName + " " + hershey.candySize);
-
+        System.out.println(mnm.candyName + " " + mnm.candySize + " " + Arrays.toString(mnm.candyDescriptors));
+        //forgot the Arrays.toString initially, but got everything else right.
 
 
     }
