@@ -1,13 +1,30 @@
 package shapes;
 
-public class Rectangle {
+public class Rectangle extends Quadrilateral implements Measurable {
 
     public double length; //public length
     public double width; // public width
 
-    public Rectangle(double recLength, double recWidth) { //Defining width and length for rectangles to be defined
-        this.length = recLength;
-        this.width = recWidth;
+    public Rectangle(double reclength, double recwidth) {
+        super(reclength, recwidth);
+        //Defining width and length for rectangles to be defined
+
+
+     //I tried commenting these out because they weren't useful, but it was a naming
+     //error
+
+        this.length = reclength;
+        this.width = recwidth;
+    }
+
+
+    public void setLength(double reclength) { //From Measurable Interface
+        this.length = reclength; //Just returns length
+    }
+
+
+    public void setWidth(double recwidth) { //From Measurable Interface
+        this.width = recwidth; //Just returns width
     }
 
 

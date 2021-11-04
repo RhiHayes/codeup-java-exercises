@@ -1,10 +1,10 @@
 package shapes;
 
-public class Square extends Rectangle {
+public class Square extends Quadrilateral {
 
     public double side;
 
-    public Square(double side) {
+    public Square(double side) { //Defining Square
 
         super(side, side);
 
@@ -31,4 +31,15 @@ public class Square extends Rectangle {
     }
 
 
+
+    public void setLength(double width) { //Sets Width
+        this.width = side;
+
+    }
+
+
+    public void setWidth(double length) { //Sets Length
+        this.length = side;
+
+    }
 }
