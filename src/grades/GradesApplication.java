@@ -49,7 +49,7 @@ public class GradesApplication {
         //Initializing GitHub Names
 
         students.put("RhiHayes", rhi);
-        students.put("AllmightMini", deku);
+        students.put("MiniMight", deku);
         students.put("DefinitelyNotAllmight", allmight);
         students.put("ShoutaAizawa31", aizawa);
 
@@ -57,31 +57,39 @@ public class GradesApplication {
        //App Dialogue
 
         System.out.println("Here are the GitHub usernames of our students:\n");
-        System.out.println("|RhiHayes| |MiniMight| |DefinitelyNotAllmight| |ShoutaAizawa31|\n");
 
 
         boolean confirmed; //declares boolean confirm
         do {
             Input input = new Input(); //Allows user input to be picked up
-            System.out.println("Who's info would you like to see?\n");;
+            System.out.println("|RhiHayes| |MiniMight| |DefinitelyNotAllmight| |ShoutaAizawa31|\n");
+            System.out.println("Who's info would you like to see?\n");
 
 
             String userChoice = input.getString(); //User's choice
 
             if (Objects.equals(userChoice, "RhiHayes")) {
                 System.out.println("You chose RhiHayes .\n");
+                System.out.println("Name: " + rhi.getName());
+                System.out.printf("Average grade = %.2f\n", rhi.getGradeAverage());
             }
 
             else if (Objects.equals(userChoice, "MiniMight")) {
                 System.out.println("You chose MiniMight.\n");
+                System.out.println("Name: " + deku.getName());
+                System.out.printf("Average grade = %.2f\n", deku.getGradeAverage());
             }
 
             else if (Objects.equals(userChoice, "DefinitelyNotAllmight")) {
                 System.out.println("You chose DefinitelyNotAllmight.\n");
+                System.out.println("Name: " + allmight.getName());
+                System.out.printf("Average grade = %.2f\n", allmight.getGradeAverage());
             }
 
             else if (Objects.equals(userChoice, "ShoutaAizawa31")) {
                 System.out.println("You chose ShoutaAizawa31.\n");
+                System.out.println("Name: " + aizawa.getName());
+                System.out.printf("Average grade = %.2f\n", aizawa.getGradeAverage());
             }
 
             else {
