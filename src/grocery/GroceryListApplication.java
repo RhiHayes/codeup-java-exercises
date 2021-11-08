@@ -22,7 +22,7 @@ public class GroceryListApplication {
         String userItem = input.getString(); //User item input
         System.out.printf("Add a quantity of %s: ", userItem);
         int userQuantity = input.getInt(); //User item number input
-        addToList(Category, userItem, userQuantity); //Adds all to list
+        addToList(Category, userItem, userQuantity); //Adds all to list, also calls addToList()
         System.out.printf("%nYour %s list:%n", categoryName);
         sortItems(Category); //sorts everything
         System.out.println();
