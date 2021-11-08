@@ -46,16 +46,16 @@ public class InputTest {
 
         //getDouble()
 
-//        System.out.println("Give me a double");
-//
-//        double doubleNum = in.getDouble();
-//        System.out.println(doubleNum);
+        System.out.println("Give me a double");
+
+        double doubleNum = in.getDouble();
+        System.out.println(doubleNum);
 
         //New Tests
 
         Input test = new Input();
-        test.getInt();
-        test.getDouble();
+        test.getInt(1, 20);
+        test.getDouble(1, 20);
 
 
     }
