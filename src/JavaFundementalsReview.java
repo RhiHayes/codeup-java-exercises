@@ -1,4 +1,8 @@
+import util.Person;
+
+import java.io.PrintStream;
 import java.util.Locale;
+import java.util.Arrays;
 
 public class JavaFundementalsReview {
 
@@ -96,6 +100,8 @@ public class JavaFundementalsReview {
 
 //1. Within your `Assessment` class create a public static method named `shout`. It should accept a string and return the same string in all upper case with 3 exclamation marks added to the end of it.
 
+//  1. Within your `Assessment` class create a public static method named `removeCats`. It should accept a list of animal objects and return a list of animal objects where any animal object with a species of "Felis catus" is removed.
+
  public static class Assessment {
 
      public static int half(int num) {
@@ -105,6 +111,7 @@ public class JavaFundementalsReview {
      public static String shout(String word) {
          return word.toUpperCase(Locale.ROOT) + "!!!";
      }
+
 
 
      public static void main(String[] args) {
@@ -125,16 +132,70 @@ public class JavaFundementalsReview {
          System.out.println(shout("I <3 coding"));
          System.out.println(shout("woah"));
 
+         Animal[] animals = new Animal[5];
+
+         animals[0] = new Animal("Lion", "Felis catus");
+         animals[1] = new Animal("Cat", "Felis catus");
+         animals[2] = new Animal("Mountain Lion", "Felis catus");
+         animals[3] = new Animal("Dog", "Mammal");
+         animals[4] = new Animal("Butterfly", "Insect");
+
      }
 
  }
 
 
-//1. Create an `Animal` class. It should have private instance properties for strings `name` and `species`, and public getters and setters for both.
+ //1. Create an `Animal` class. It should have private instance properties for strings `name` and `species`, and public getters and setters for both.
 
 //1. Within your `Animal` class, define an instance method named `roar`. It should accept no arguments and return a string like "I am $NAME, hear me roar!" where `$NAME` is replaced with the value of the name property for that object.
 
-//  1. Within your `Assessment` class create a public static method named `removeCats`. It should accept a list of animal objects and return a list of animal objects where any animal object with a species of "Felis catus" is removed.
+    public static class Animal {
+
+     private String name;
+     private String species;
+
+     public Animal (String name, String species) {
+         this.name = name;
+         this.species = species;
+     }
+
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getSpecies() {
+            return species;
+        }
+
+        public void setSpecies(String species) {
+            this.species = species;
+        }
+
+        public String roar() {
+         String myRoar = "I am a " + this.name + ", HEAR ME ROAR!!!";
+         return myRoar;
+
+        }
+
+        public static void main(String[] args) {
+
+         Animal lion = new Animal("Lion", "Mammal");
+         Animal frog = new Animal("Frog", "Amphibian");
+
+         System.out.println(lion.roar());
+         System.out.println(frog.roar());
+
+
+        }
+
+
+
+    }
 
 // Note that the assessment spec only requires you to have methods and classes defined, there is not any requirement for a `main` method. However, creating additional methods will **not** be counted against you, so you are **_highly encouraged_** to create a `main` method and write some code that tests out the code you are writing for the assessment specification. For example, if you were working on the `half` function, you should call that function within the main method and make sure that it returns the correct values for several test cases.
 //
