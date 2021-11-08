@@ -4,19 +4,19 @@ import java.util.Scanner;
 
 public class Input {
 
-private Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
 
-public String getString() {
-    return scanner.nextLine();
-}
+    public String getString() {
+        return scanner.nextLine();
+    }
 
 
     public boolean yesNo() {
 
         if (Objects.equals(scanner.nextLine(), "y")) {
-        return true;
+            return true;
         } else {
-        return false;
+            return false;
         }
 
 
@@ -28,7 +28,7 @@ public String getString() {
 
         System.out.println("Enter an integer between " + min + " and " + max);
 
-         int userNumber;
+        int userNumber;
 
         userNumber = this.scanner.nextInt();
 
