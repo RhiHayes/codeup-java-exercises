@@ -13,7 +13,7 @@ public String getString() {
 
     public boolean yesNo() {
 
-        if  (Objects.equals(scanner.nextLine(), "y")) {
+        if (Objects.equals(scanner.nextLine(), "y")) {
         return true;
         } else {
         return false;
@@ -21,48 +21,83 @@ public String getString() {
 
 
     }
-
-    public int getInt(int min, int max) {
-
-        System.out.println("Enter an integer between " + min + " and " + max);
-
-         int userNumber;
-
-        userNumber = this.scanner.nextInt();
-
-        if(userNumber <= max && userNumber >= min){
-            return userNumber;
-        } else {
-            System.out.println("Wrong, try again!");
-            return getInt(min, max);
-        }
+//OLD GETINT();
 
 
-    }
+//    public int getInt(int min, int max) {
+//
+//        System.out.println("Enter an integer between " + min + " and " + max);
+//
+//         int userNumber;
+//
+//        userNumber = this.scanner.nextInt();
+//
+//        if(userNumber <= max && userNumber >= min){
+//            return userNumber;
+//        } else {
+//            System.out.println("Wrong, try again!");
+//            return getInt(min, max);
+//        }
+//
+//
+//    }
 
+
+//OLD GETINT();
+
+
+//    public int getInt(){
+//        return scanner.nextInt();
+//    }
+
+
+//NEW GETINT();
     public int getInt(){
-        return scanner.nextInt();
-    }
 
+        System.out.print("Enter an integer: ");
 
-    public double getDouble(double min, double max) {
-        System.out.println("Enter an integer between " + min + " and " + max);
-
-        double userInput = this.scanner.nextDouble();
-
-        while (userInput <= min || userInput >= max) {
-            System.out.println("Enter an integer between " + min + " and " + max);
-            userInput = this.scanner.nextDouble();
+        try {
+            return Integer.parseInt((getString()));
+        } catch (NumberFormatException e){
+            System.out.println("Not a valid input, try again.");
         }
-        return userInput;
+        return getInt();
     }
 
 
+//OLD GETDOUBLE();
+
+
+//    public double getDouble(double min, double max) {
+//        System.out.println("Enter an integer between " + min + " and " + max);
+//
+//        double userInput = this.scanner.nextDouble();
+//
+//        while (userInput <= min || userInput >= max) {
+//            System.out.println("Enter an integer between " + min + " and " + max);
+//            userInput = this.scanner.nextDouble();
+//        }
+//        return userInput;
+//    }
+
+
+//OLD GETDOUBLE();
+
+
+//    public double getDouble(){
+//        return scanner.nextDouble();
+//    } //Hadn't programmed this in; this is what I needed for my circle app.
 
     public double getDouble(){
-        return scanner.nextDouble();
-    } //Hadn't programmed this in; this is what I needed for my circle app.
 
+        System.out.println("Enter a double");
+
+        try{
+            return Double.parseDouble(getString());
+        }catch (NumberFormatException e){
+            System.out.println("Not a valid input, try again.");
+        }return getDouble();
+    }
 
 
 }
