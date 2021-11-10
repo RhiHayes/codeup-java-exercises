@@ -1,10 +1,5 @@
-import util.Person;
-
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Locale;
-import java.util.Arrays;
-import java.util.Objects;
 
 public class JavaFundementalsReview {
 
@@ -104,15 +99,7 @@ public class JavaFundementalsReview {
 
 //  1. Within your `Assessment` class create a public static method named `removeCats`. It should accept a list of animal objects and return a list of animal objects where any animal object with a species of "Felis catus" is removed.
 
- public static class Assessment extends Animal {
-
-     public Assessment(String name, String species) {
-         super(name, species);
-     }
-
-     public static ArrayList<Animal> removeCats() {
-         return null;
-     }
+ public static class Assessment { //extends animal wasn't neccesary here
 
      public static int half(int num) {
          return num/ 2;
@@ -122,6 +109,11 @@ public class JavaFundementalsReview {
          return word.toUpperCase(Locale.ROOT) + "!!!";
      }
 
+     public static void removeCats(ArrayList<Animal> animals){
+         //Originally a for loop but it didn't work; this piece of code saved me!
+
+         animals.removeIf(animal -> animal.getSpecies() == "Felis catus");
+     }
 
 
      public static void main(String[] args) {
@@ -142,21 +134,30 @@ public class JavaFundementalsReview {
          System.out.println(shout("I <3 coding"));
          System.out.println(shout("woah"));
 
-         Animal[] animals = new Animal[5];
+         System.out.println("-----------------");
 
-         animals[0] = new Animal("Lion", "Felis catus");
-         animals[1] = new Animal("Cat", "Felis catus");
-         animals[2] = new Animal("Mountain Lion", "Felis catus");
-         animals[3] = new Animal("Dog", "Mammal");
-         animals[4] = new Animal("Butterfly", "Insect");
+         // Had to declare variables instead of inserting at indexes
+         Animal lion = new Animal("lion", "Panthera");
+         Animal cat = new Animal ("Tiger", "Felis catus");
+         Animal anotherAnimal = new Animal ("Something", "Felis catus");
+
+         ArrayList<Animal> animals = new ArrayList<>();
 
 
-         for(int i = 0; i < animals.length; i++){
-             System.out.println(animals[i].getName() + " " + animals[i].getSpecies());
+         //Adding variables to list
+         animals.add(lion);
+         animals.add(cat);
+         animals.add(anotherAnimal);
 
-             if (Objects.equals(animals[i].species, "Felis Catus")) {
-                 System.out.println("REMOVE ME");
-             }
+         System.out.println("Old animals : " + animals);
+         System.out.println("lion.getName and lion.getSpecies " + lion.getName() + " - " + lion.getSpecies());
+         System.out.println("cat.getName and cat.getSpecies " + cat.getName() + " - " + cat.getSpecies());
+         System.out.println("-----------------");
+         removeCats(animals);
+         System.out.println("-----------------");
+         System.out.println("lion.getName and lion.getSpecies " + lion.getName() + " - " + lion.getSpecies());
+         System.out.println("cat.getName and cat.getSpecies " + cat.getName() + " - " + cat.getSpecies());
+         System.out.println("New animals : " + animals);
 
          } //The for loop prints out each individual name
 
@@ -170,59 +171,19 @@ public class JavaFundementalsReview {
 
 //1. Within your `Animal` class, define an instance method named `roar`. It should accept no arguments and return a string like "I am $NAME, hear me roar!" where `$NAME` is replaced with the value of the name property for that object.
 
-    public static class Animal {
-
-     private String name;
-     private String species;
-
-     public Animal (String name, String species) {
-         this.name = name;
-         this.species = species;
-     }
-
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String getSpecies() {
-            return species;
-        }
-
-        public void setSpecies(String species) {
-            this.species = species;
-        }
-
-        public String roar() {
-         String myRoar = "I am a " + this.name + ", HEAR ME ROAR!!!";
-         return myRoar;
-
-        }
-
-        public static void main(String[] args) {
-
-         Animal lion = new Animal("Lion", "Mammal");
-         Animal frog = new Animal("Frog", "Amphibian");
-
-         System.out.println(lion.roar());
-         System.out.println(frog.roar());
-
-
-        }
-
-
-
-    }
-
 // Note that the assessment spec only requires you to have methods and classes defined, there is not any requirement for a `main` method. However, creating additional methods will **not** be counted against you, so you are **_highly encouraged_** to create a `main` method and write some code that tests out the code you are writing for the assessment specification. For example, if you were working on the `half` function, you should call that function within the main method and make sure that it returns the correct values for several test cases.
+
+
+
+//NOTE FOR ME: Had to move animal into it's own file, see Animal.java
+
+
 //
 //
 //
 
 
 
-}
+
+
+
