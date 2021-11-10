@@ -1,8 +1,10 @@
 import util.Person;
 
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Arrays;
+import java.util.Objects;
 
 public class JavaFundementalsReview {
 
@@ -102,7 +104,15 @@ public class JavaFundementalsReview {
 
 //  1. Within your `Assessment` class create a public static method named `removeCats`. It should accept a list of animal objects and return a list of animal objects where any animal object with a species of "Felis catus" is removed.
 
- public static class Assessment {
+ public static class Assessment extends Animal {
+
+     public Assessment(String name, String species) {
+         super(name, species);
+     }
+
+     public static ArrayList<Animal> removeCats() {
+         return null;
+     }
 
      public static int half(int num) {
          return num/ 2;
@@ -139,6 +149,17 @@ public class JavaFundementalsReview {
          animals[2] = new Animal("Mountain Lion", "Felis catus");
          animals[3] = new Animal("Dog", "Mammal");
          animals[4] = new Animal("Butterfly", "Insect");
+
+
+         for(int i = 0; i < animals.length; i++){
+             System.out.println(animals[i].getName() + " " + animals[i].getSpecies());
+
+             if (Objects.equals(animals[i].species, "Felis Catus")) {
+                 System.out.println("REMOVE ME");
+             }
+
+         } //The for loop prints out each individual name
+
 
      }
 

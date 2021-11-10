@@ -41,7 +41,7 @@ public class FileIOLec {
         List <String> printList = Files.readAllLines(groceriesTxtPath);
         System.out.println("printList = " + printList);
 
-        Files.write(Paths.get(groceriesTxtPath, Arrays.asList("eggs", "milkbones"), StandardOpenOption.APPEND);
+//        Files.write(Paths.get(groceriesTxtPath, Arrays.asList("eggs", "milkbones"), StandardOpenOption.APPEND);
 
 
 
